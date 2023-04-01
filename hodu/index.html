@@ -5,32 +5,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="style.css">
   <title>HODU</title>
 </head>
 <body>
   <!-- header -->
+  <!-- div 말고 header로 감싸라 -->
   <header id="globalheader">
     <div class="container">
-      <h1>
-        <a href="">
-          <img class="logo" src="img/logo.svg" alt="logo">
-        </a>
-      </h1>
-      <nav id="globalnav">
-        <ul>
-          <li>
-            <a href="">Home</a>
-          </li>
-          <li>
-            <a href="">About</a>
-          </li>
-          <li>
-            <a href="">Support</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="orange-btn" type="button">Download</button>
+      <div id="header1">
+          <h1>
+            <a href="">
+              <!-- logo 말고 이미지 설명할 수 있는거 -->
+              <img class="logo" src="img/logo.svg" alt="logo">
+            </a>
+          </h1>
+        <button id="btn-allmenu" type="button">
+          <img src="img/menu.svg" alt="모든 메뉴 보기">
+        </button>
+      </div>
+      <div id="header2" >
+        <nav id="globalnav">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#" class="orange-btn">Download</a>
+        <button id="btn-close" type="button">
+          <img src="img/arrow-right.svg" alt="메뉴 닫기">
+        </button>
+      </div>
     </div>
   </header>
   <!-- //header -->
@@ -39,7 +52,7 @@
   <section class="section1">
     <div class="container">
       <div class="left-center">
-        <h2>Lorem Ipsum is simply dummy text of the printing and</h2>
+        <h2>Lorem Ipsum is simply<br>dummy text of the printing and</h2>
         <p>Lorem Ipsum is simply dummy text of the printing and
           typesetting industry.<br>
           Lorem Ipsum has been the industry's standard dummy text
@@ -51,7 +64,7 @@
   </section>
 
   <section class="section2">
-    <div>
+    <div class="wrap-content">
       <h2>Lorem Ipsum is simply dummy text of the printing and dummy text</h2>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
     </div>
@@ -65,61 +78,80 @@
         <p>Lorem Ipsum is simply <strong>dummy text</strong> of the printing and typesetting industry.<br>
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
       </div>
-      <!-- 이름... -->
       <div class="img-wrap">
         <img class="img-item" src="img/img3-1.png" alt="">
         <img class="img-item" src="img/img3-2.png" alt="">
         <img class="img-item" src="img/img3-3.png" alt="">
       </div>
-      <!-- 이름이 맘에 안듬.....  -->
       <div class="more-wrap">
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown<br>
         Ipsum is simply dummy text of the printing and typesetting industry.</p>
         <button class="orange-btn" type="button">Learn More</button>
       </div>
-      <!-- 이름... -->
       <article class="navy-box">
-        <div>
+        <div class="wrap-text">
           <h3>Subscribe to our Blog post</h3>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
           Lorem Ipsum has been the industry's standard dummy text</p>
         </div>
         <form class="" action="">
-          <img src="img/mail.svg" alt="">
-          <label for="email-input"></label>
-          <input class="white-input" id="email-input" type="email" placeholder="Enter your e-mail address">
-          <label for="email-submit"></label>
-          <input class="orange-btn" id="email-submit" type="submit"  value="Subscribe">
+          <div class="wrap-input">
+            <img src="img/mail.svg" alt="">
+            <label for="email-input"></label>
+            <input class="white-input" id="email-input" type="email" placeholder="Enter your e-mail address">
+          </div>
+          <!-- submit label 필요없음 -->
+          <label class="wrap-btn">
+            <input class="orange-btn" type="submit"  value="Subscribe">
+        </label>
         </form>
       </article>
     </div>
   </section>
   <!-- 위로가기 -->
-  <div></div>
   <!-- // main -->
 
   <!-- footer -->
   <footer id="globalfooter">
+    <div class="left">
     <a href="">
       <img class="logo" src="img/logo.svg" height="42" alt="logo">
     </a>
     <ul class="sns-list">
       <li>
-        <img class="sns" src="img/icon-blog.svg" height="42" alt="">
+        <a href="#">
+          <!-- blog-icon 말고 blog -->
+          <img class="sns" src="img/icon-blog.svg" height="42" alt="">
+        </a>
       </li>
       <li>
-        <img class="sns" src="img/icon-facebook.svg" height="42" alt="">
+        <!-- a 태그 영역 수정 고려 -->
+        <a href="#">
+          <!-- css 여기 넣지 말기 -->
+          <img class="sns" src="img/icon-facebook.svg" height="42" alt="">
+        </a>
       </li>
       <li>
-        <img class="sns" height="42"  src="img/icon-insta.svg" alt="">
+        <a href="#">
+          <img class="sns" height="42"  src="img/icon-insta.svg" alt="">
+        </a>
       </li>
       <li>
-        <img class="sns" src="img/nike.png" height="42" alt="">
-        <!-- <img class="sns" src="img/icon-youtube.svg" alt=""> -->
+        <a href="#">
+          <img class="sns" src="img/icon-youtube.svg" alt="">
+        </a>
       </li>
+    </ul>
+    </div>
+    <ul class="business">
+      <li>About</li>
+      <li>Blog</li>
+      <li>Support</li>
+      <li>Terms of Use</li>
     </ul>
   </footer>
   <!-- //footer -->
+  <script src="index.js"></script>
 </body>
 </html>
