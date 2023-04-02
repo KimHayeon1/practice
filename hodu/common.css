@@ -45,7 +45,7 @@ ul {
   padding: 15px 29px;
 }
 
-@media (width	< 768px) {
+@media (width	< 576px) {
   .orange-btn {
     padding: 11px 14px;
   }

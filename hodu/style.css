@@ -108,9 +108,12 @@ line-height: 4.5rem;
   line-height: 6rem;
   margin-bottom: 40px;
 }
-.text-center p {
+.section3 p {
   font-size: 1.6rem;
   line-height: 2rem;
+}
+.section3 > .container > p {
+  text-align: center;
 }
 .section3 strong {
   color: var(--primary-color);
@@ -137,14 +140,9 @@ line-height: 4.5rem;
   flex-wrap: wrap;
   align-items: center;
   gap: 52px;
-  font-size: 1.6rem;
-  line-height: 2rem;
 }
 .more-wrap button{
   margin-left: auto;
-}
-.text-center {
-  text-align: center;
 }
 .section3::after {
   content: '';
@@ -156,7 +154,6 @@ line-height: 4.5rem;
   background: #263140;
   color: #fff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
@@ -176,11 +173,20 @@ line-height: 4.5rem;
   margin-bottom: 18px;
 }
 form {
+  margin-left: auto;
   max-width: 530px;
   position: relative;
   display: flex;
   align-items: center;
   flex-grow: 1;
+}
+form::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 28px;
+  background: url(img/mail.svg) no-repeat 0 0 / contain;
 }
 .wrap-btn {
   position: absolute;
@@ -190,7 +196,6 @@ form img {
   position: absolute;
 }
 .wrap-input {
-  position: relative;
   flex-grow: 1;
 }
 .wrap-input img {
@@ -316,33 +321,18 @@ form img {
     line-height: 3rem;
     margin-bottom: 30px;
 }
-  .section3::after {
-    height: 240px;
-  }
-  
-.business {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  text-align: right;
-  flex-basis: 100%;
-}
-}
 
-@media (width	< 768px) {
-  .navy-box {
-    padding: 36px 32px 30px;
-    flex-direction: column;
-    gap: 30px;
-    align-items: flex-start;
-  }
   form {
     flex-direction: column;
     gap: 20px;
     align-items: flex-end;
     align-self: flex-end;
+    width: 100%;
+  }
+  form::before {
+    top: 11px;
+    left: 16px;
+    width: 18px;
   }
   .wrap-input {
     width: 100%;
@@ -350,7 +340,30 @@ form img {
   .wrap-btn {
     position: static;
   }
+  .section3::after {
+    height: 240px;
+  }
   
+  .business {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: right;
+    flex-basis: 100%;
+  }
+}
+
+@media (width	< 768px) {
+  .navy-box {
+    padding: 36px 32px 30px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .wrap-text {
+    margin-right: auto;
+  }
   .section2 {
     padding: 40px 0;
   }
