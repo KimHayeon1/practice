@@ -1,0 +1,9 @@
+button {
+  background: url('/img/chair.jpg') center/ cover;
+  color: white;
+  aspect-ratio: 4/5;
+}
+
+.btn-wrap {
+  text-align: right;
+}
