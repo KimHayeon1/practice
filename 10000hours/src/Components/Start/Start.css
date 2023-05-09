@@ -1,9 +1,20 @@
 button {
-  background: url('/img/chair.jpg') center/ cover;
+  border: none;
+  padding: 4px 8px;
+  font-size: 2rem;
+  font-family: inherit;
   color: white;
-  aspect-ratio: 4/5;
+  background: black;
+  border-radius: 20px;
+  line-height: 1.2;
 }
 
-.btn-wrap {
+.start img {
+  width: 32px;
+  margin-left: 4px;
+}
+
+.start {
   text-align: right;
+  margin: 24px 0;
 }
