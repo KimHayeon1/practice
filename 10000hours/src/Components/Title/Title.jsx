@@ -1,5 +1,5 @@
 import './Title.css'
-import titImg from '../../img/tit.png'
+import titImg from '../../img/tit3.png'
 
 export default function Title() {
   return (

@@ -1,18 +1,11 @@
 .input-wrap {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0 0 24px;
 }
 .input-wrap input {
-  border: none;
-  padding: 4px 8px;
+  border-width: 0 0 1px 0;
+  padding: 0;
   font-size: inherit;
   font-family: inherit;
   margin: 0 8px;
-  color: white;
-  background: black;
-  border-radius: 20px;
-}
-
-.input-wrap input::placeholder {
-  color: white;
 }

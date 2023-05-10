@@ -10,7 +10,7 @@ import { useState } from 'react'
 
 function App() {
   const [modal, setModal] = useState(false);
-  const [start, setStart] = useState(false);
+  const [result, setResult] = useState([]);
   const [fieldInp, setFieldInp] = useState('');
   const [timeInp, setTimeInp] = useState('');
   return (
@@ -18,10 +18,10 @@ function App() {
       <Title />
       <Intro />
       <Inputs setFieldInp={setFieldInp} setTimeInp={setTimeInp} />
-      <Start fieldInp={fieldInp} timeInp={timeInp} setStart={setStart} />
-      {start && <Result fieldInp={fieldInp} timeInp={timeInp} />}
-      {start && <Buttons setModal={setModal}/>}
-      {modal && <Modal />}
+      <Start fieldInp={fieldInp} timeInp={timeInp} setResult={setResult} />
+      {(result.length !== 0) && <Result result={result} />}
+      {(result.length !== 0) && <Buttons setModal={setModal}/>}
+      {modal && <Modal setModal={setModal}/>}
     </main>
   );
 }

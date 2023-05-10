@@ -3,9 +3,8 @@ import startImg from '../../img/click.png'
 
 export default function Start(props) {
   const startBtnHandle = function() {
-    console.log(props.fieldInp)
     if (props.fieldInp && props.timeInp) {
-      props.setStart(true)
+      props.setResult([props.fieldInp, props.timeInp])
     } else {
       alert('입력해주세요.')
     }
