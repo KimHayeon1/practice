@@ -1,0 +1,21 @@
+:global [class^=btn-] {
+  border: none;
+  padding: 8px 12px;
+  font-size: 1.6rem;
+  font-family: inherit;
+  color: white;
+  background: black;
+  border-radius: 20px;
+  line-height: 1.2;
+}
+
+.start img {
+  background: red;
+
+  width: 28px;
+  margin: 2px 0 0 5px;
+}
+
+.start {
+  margin-top: 60px;
+}
