@@ -1,12 +1,16 @@
+import React, { useState, useEffect } from 'react';
 import './Product.css'
 
-async function getData() {
-  const data = await fetch('http://test.api.weniv.co.kr/mall');
-  return data.json();
-}
-
-async function Product() {
-  const data = await getData();
+function Product() {
+  const [data, setData] = useState([]);
+  async function getData() {
+    const data = await fetch('http://test.api.weniv.co.kr/mall');
+    const json =  await data.json();
+    setData(json)
+  }
+  useEffect(() => {
+    getData();
+  }, [])
   return (
     <main className="main-1260">
       <ul className="product-list">

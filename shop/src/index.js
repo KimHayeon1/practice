@@ -4,18 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// npm i styled-reset
 import { Reset } from 'styled-reset'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // React.StrictMode가 뭐지?
-(async function() {
+
   root.render(
     <React.StrictMode>
     <Reset />
-      {await App()}
+      <App />
     </React.StrictMode>
   );
-}())
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
