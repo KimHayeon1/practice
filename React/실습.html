@@ -14,57 +14,48 @@
   <div id="root"></div>
 
   <script type="text/babel">
-    import React, {Fragment} from 'react';
     async function getData() {
-      const data = await fetch('http://test.api.weniv.co.kr/mall');
-      return data.json();
-    }
-    let data;
-    (async function() {
-      data = await getData(); 
+  const data = await fetch('http://test.api.weniv.co.kr/mall');
+  return data.json();
+}
+const domContainer = document.querySelector('#root');
+let data;
+(async function() {
+  data = await getData(); 
 
-        
-      function Product() {
-        return (
-          <main>
-            <ul>
-              <Card goods={data[0]} />
-              <Card goods={data[1]} />
-              <Card goods={data[2]} />
-              <Card goods={data[3]} />
-              <Card goods={data[4]} />
-              <Card goods={data[5]} />
-              <Card goods={data[6]} />
-            </ul>
-          </main>
-        )
-      }
+  const root = ReactDOM.createRoot(domContainer);
+  root.render(body);
+}())
 
-      const body = (
-          <div>
-            <Product/>
-          </div>
-      );
+function Product() {
+  return (
+    <main>
+      <ul>
+        <Card goods={data[0]} />
+        <Card goods={data[1]} />
+        <Card goods={data[2]} />
+        <Card goods={data[3]} />
+        <Card goods={data[4]} />
+        <Card goods={data[5]} />
+        <Card goods={data[6]} />
+      </ul>
+    </main>
+  )
+  }
 
-      const domContainer = document.querySelector('#root');
-      const root = ReactDOM.createRoot(domContainer);
-      root.render(body);
-    }())
-
-
-    function Card(a) {
-      
-      console.log(a)
-      return (
-        <li>
-        <strong>{a.goods.productName}</strong>
-        <div>
-            <strong>{a.goods.price}<span>원</span></strong>
-        </div>
-        </li>
-      )
-    }
-
+const body = (
+  <div>
+    <Product/>
+  </div>
+);
+function Card(a) {
+  return (
+    <li>
+      <strong>{a.goods.productName}</strong>
+      <strong>{a.goods.price}<span>원</span></strong>
+    </li>
+  )
+}
   </script>
 </body>
 
