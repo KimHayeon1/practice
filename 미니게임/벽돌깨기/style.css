@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+#myCanvas {
+  display: block;
+  margin: 0 auto;
+  background: #ddd;
+  border-radius: 24px;
+}
