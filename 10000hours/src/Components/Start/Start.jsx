@@ -11,9 +11,9 @@ export default function Start(props) {
     }
   }
   return (
-    <div className={styles.start}>
+    <div id={styles.start}>
       {/* <button className='btn-black' onClick={startBtnHandle} type='button'>나는 며칠 동안 훈련해야 전문가가 될 수 있을까?</button> */}
-      <Btn f={startBtnHandle} />
+      <Btn f={startBtnHandle} text='ssss'/>
       <img src={startImg} alt="버튼을 가리키는 화살표 이미지" />
     </div>
   );
