@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Server</title>
+</head>
+<body>
+  <pre></pre>
+  <script>
+    const xhr = new XMLHttpRequest();
+
+    // HTTP 요청 초기화
+    // todos 리소스에서 모든 todo 취득(index)
+    xhr.open('GET', 'todos')
+
+    // HTTP 요청 전송
+    xhr.send();
+
+    xhr.onload= () => {
+      if (xhr.status === 200) {
+        document.querySelector('pre').textContent = xhr.response;
+      } else {
+        console.error('Error', xhr.status, xhr.statusText)
+      }
+    }
+  </script>
+</body>
+</html>

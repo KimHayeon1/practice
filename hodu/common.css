@@ -1,0 +1,52 @@
+html {
+  font-size: 10px;
+}
+:root {
+  --primary-color: #d97652;
+}
+
+/* reset */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+}
+img {
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button, input {
+  border: none;
+  padding: 0;
+}
+button {
+  background: none;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+}
+
+/* component */
+.left-center {
+  margin: auto 0;
+}
+.orange-btn {
+  background: var(--primary-color);
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  /* 가변값 11 14 */
+  padding: 15px 29px;
+}
+
+@media (width	< 576px) {
+  .orange-btn {
+    padding: 11px 14px;
+  }
+}

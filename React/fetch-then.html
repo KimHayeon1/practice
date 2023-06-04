@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>위니브 샵</title>
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    fetch("http://test.api.weniv.co.kr/mall")
+    .then(response => response.json())
+    .then(data => {
+        const body = (
+            <div>
+                <Product item={data} />
+            </div>
+        )
+        const domContainer = document.querySelector('#root');
+        const root = ReactDOM.createRoot(domContainer);
+        root.render(body);
+    })
+    .catch(error => console.log(error))
+
+
+const Card = function (props) {
+  return (
+      <li className="Card">
+          <h2 className="Card-title">{props.goods.productName}</h2>
+          <p className="Card-price">{props.goods.price}</p>
+      </li>
+  )
+}
+
+const Product = function (props) {
+  return (
+      <ul className="card-list">
+          <Card goods={props.item[0]} />
+          <Card goods={props.item[1]} />
+          <Card goods={props.item[2]} />
+          <Card goods={props.item[3]} />
+          <Card goods={props.item[4]} />
+          <Card goods={props.item[5]} />
+          <Card goods={props.item[6]} />
+      </ul>
+  )
+}
+  </script>
+</body>
+
+</html>

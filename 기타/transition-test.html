@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    div {
+      width: 300px;
+      background-color: aqua;
+      height: 300px;
+      left: 0;
+transition: all 4s 1s;
+      display: none;
+    }
+    span:hover + div{
+      background-color: darkblue;
+      position: absolute;
+      left: 500px;
+      display: block;
+    }
+    /* div가 이동하며 나타나려면 display block된 시점에 left 0에 위치하고 500까지 움직여야 한다. 이를 어떻게 구현하지?ㅜ */
+  </style>
+</head>
+<body>
+  <span>a</span>
+  <div></div>
+</body>
+</html>

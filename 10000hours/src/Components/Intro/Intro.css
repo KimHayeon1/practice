@@ -1,0 +1,11 @@
+.quotation {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 2.2rem;
+}
+
+.explain {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 72px;
+}

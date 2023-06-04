@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    
+.navy-box {
+  background: #263140;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 143px;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  /* 가변값 36 32 30 */
+  padding: 50px 58px;
+  margin: 90px 0 -94px;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.navy-box h3 {
+  font-size: 3.6rem;
+  line-height: 4.5rem;
+  margin-bottom: 18px;
+}
+form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* 가변값 */
+}
+form .orange-btn {
+  position: absolute;
+}
+form img {
+  position: absolute;
+}
+.wrap-input {
+  position: relative;
+}
+.wrap-input img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 28px;
+}
+.white-input {
+  /* input:focus input width*/
+  padding: 18px 28px 18px 68px;
+  border-radius: 60px;
+  box-sizing: border-box;
+  /* margin-left: 16px; */
+  font-size: 1.6rem;
+  line-height: 2rem;
+  width: 100%;
+  /* margin-right: 15px; */
+}
+  </style>
+</head>
+<body>
+  <article class="navy-box">
+    <div class="wrap-text">
+      <h3>Subscribe to our Blog post</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+      Lorem Ipsum has been the industry's standard dummy text</p>
+    </div>
+    <form class="" action="">
+      <div class="wrap-input">
+        <img src="img/mail.svg" alt="">
+        <label for="email-input"></label>
+        <input class="white-input" id="email-input" type="email" placeholder="Enter your e-mail address">
+      </div>
+    </form>
+  </article>
+</body>
+</html>
